@@ -63,8 +63,9 @@ let age = document.querySelector('#age').value
         break
 
     };
-    let bmi = eval(weight/(height/100));
-    document.getElementById('output').innerHTML = bmi
+    let bmi = eval(weight/((height/100)*2));
+    let bmi1 = bmi.toFixed(2);
+    document.getElementById('output').innerHTML = bmi1
 })
 
 
