@@ -61,22 +61,22 @@ result.addEventListener('click', () => {
 //         break
 
 //     };
-    let bmi = document.querySelector('#weight').value
+    let bmi = document.querySelector('#output').value
     switch (true) {
+        case (bmi < 18.5):
+            document.getElementById('weioutput').innerText = ('You are light');
+        break
+        case (bmi < 25):
+            document.getElementById('weioutput').innerText = ('You are getting fat');
+        break
+        case (bmi < 30):
+            document.getElementById('weioutput').innerText = ('You are obest');
+        break
+        case (bmi < 35):
+            document.getElementById('weioutput').innerText = ('You need help');
+        break
         case (bmi < 40):
-            document.getElementById('weightPar').innerText = ('You are light');
-        break
-        case (bmi < 80):
-            document.getElementById('weightPar').innerText = ('You are getting fat');
-        break
-        case (bmi < 140):
-            document.getElementById('weightPar').innerText = ('You are obest');
-        break
-        case (bmi < 480):
-            document.getElementById('weightPar').innerText = ('You need help');
-        break
-        case (bmi < 1000):
-            document.getElementById('weightPar').innerText = ('How are you alive');
+            document.getElementById('weioutput').innerText = ('You need help');
         break
 
     };
