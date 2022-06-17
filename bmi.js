@@ -61,28 +61,28 @@ result.addEventListener('click', () => {
 //         break
 
 //     };
-    let bmi = document.querySelector('#output').value
+    let bmi = document.querySelector('#outputText')
     switch (true) {
         case (bmi < 18.5):
-            document.getElementById('weioutput').innerText = ('You are light');
+            document.getElementById('outputText').innerText = 'You are light';
         break
         case (bmi < 25):
-            document.getElementById('weioutput').innerText = ('You are getting fat');
+            document.getElementById('outputText').innerText = 'You are getting fat';
         break
         case (bmi < 30):
-            document.getElementById('weioutput').innerText = ('You are obest');
+            document.getElementById('outputText').innerText = 'You are obest';
         break
         case (bmi < 35):
-            document.getElementById('weioutput').innerText = ('You need help');
+            document.getElementById('outputText').innerText = 'You need help';
         break
         case (bmi < 40):
-            document.getElementById('weioutput').innerText = ('You need help');
+            document.getElementById('outputText').innerText = 'You need help';
         break
 
     };
     let bmi1 = eval(weight/((height/100)*2));
     let bmi2 = bmi1.toFixed(2);
-    document.getElementById('output').innerHTML = bmi2
+    document.getElementById('output').innerHTML = 'Your BMI is '.concat(bmi2)
 })
 
 
