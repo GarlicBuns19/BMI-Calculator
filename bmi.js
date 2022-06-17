@@ -23,7 +23,7 @@ result.addEventListener('click', () => {
 //         break
 
 //     };
-//     let height = document.querySelector('#height').value
+    let height = document.querySelector('#height').value
 //     switch (true) {
 //         case (height < 100):
 //             document.getElementById('heightPar').innerText = ('You are growing');
@@ -42,7 +42,7 @@ result.addEventListener('click', () => {
 //         break
 
 //     };
-//     let weight = document.querySelector('#weight').value
+    let weight = document.querySelector('#weight').value
 //     switch (true) {
 //         case (weight < 40):
 //             document.getElementById('weightPar').innerText = ('You are light');
@@ -61,28 +61,28 @@ result.addEventListener('click', () => {
 //         break
 
 //     };
-    let weight = document.querySelector('#weight').value
+    let bmi = document.querySelector('#weight').value
     switch (true) {
-        case (weight < 40):
+        case (bmi < 40):
             document.getElementById('weightPar').innerText = ('You are light');
         break
-        case (weight < 80):
+        case (bmi < 80):
             document.getElementById('weightPar').innerText = ('You are getting fat');
         break
-        case (weight < 140):
+        case (bmi < 140):
             document.getElementById('weightPar').innerText = ('You are obest');
         break
-        case (weight < 480):
+        case (bmi < 480):
             document.getElementById('weightPar').innerText = ('You need help');
         break
-        case (weight < 1000):
+        case (bmi < 1000):
             document.getElementById('weightPar').innerText = ('How are you alive');
         break
 
     };
-    let bmi = eval(weight/((height/100)*2));
-    let bmi1 = bmi.toFixed(2);
-    document.getElementById('output').innerHTML = bmi1
+    let bmi1 = eval(weight/((height/100)*2));
+    let bmi2 = bmi1.toFixed(2);
+    document.getElementById('output').innerHTML = bmi2
 })
 
 
