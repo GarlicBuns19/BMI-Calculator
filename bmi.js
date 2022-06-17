@@ -61,28 +61,32 @@ result.addEventListener('click', () => {
 //         break
 
 //     };
-    let bmi = document.querySelector('#outputText')
-    switch (true) {
-        case (bmi < 18.5):
-            document.getElementById('outputText').innerText = 'You are light';
-        break
-        case (bmi < 25):
-            document.getElementById('outputText').innerText = 'You are getting fat';
-        break
-        case (bmi < 30):
-            document.getElementById('outputText').innerText = 'You are obest';
-        break
-        case (bmi < 35):
-            document.getElementById('outputText').innerText = 'You need help';
-        break
-        case (bmi < 40):
-            document.getElementById('outputText').innerText = 'You need help';
-        break
-
-    };
     let bmi1 = eval(weight/((height/100)*2));
     let bmi2 = bmi1.toFixed(2);
     document.getElementById('output').innerHTML = 'Your BMI is '.concat(bmi2)
+
+    switch (true) {
+        case (bmi1 < 18.5):
+            document.getElementById('outputText').innerText = 'You fall in the underweight range';
+        break
+        case (bmi1 < 25):
+            document.getElementById('outputText').innerText = 'You fall in the normal range';
+        break
+        case (bmi1 < 30):
+            document.getElementById('outputText').innerText = 'You fall in the overweight range';
+        break
+        case (bmi1 < 35):
+            document.getElementById('outputText').innerText = 'You fall in the range of getting obese';
+        break
+        case (bmi1 < 40):
+            document.getElementById('outputText').innerText = 'You fall in the obesity range';
+        break
+
+    };
+
+    // let bmi1 = eval(weight/((height/100)*2));
+    // let bmi2 = bmi1.toFixed(2);
+    // document.getElementById('output').innerHTML = 'Your BMI is '.concat(bmi2)
 })
 
 
